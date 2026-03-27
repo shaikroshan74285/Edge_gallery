@@ -1,0 +1,62 @@
+{
+  "name": "remiai-edge-gallery",
+  "version": "1.0.0",
+  "description": "RemiAI Edge Gallery - Download, run, and experiment with open-source AI models locally",
+  "main": "main.js",
+  "author": "RemiAI",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.remiai.edge.gallery",
+    "productName": "RemiAI Edge Gallery",
+    "compression": "store",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "remiai.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "RemiAI edge gallery",
+      "runAfterFinish": true
+    },
+    "files": [
+      "**/*",
+      "!dist/*",
+      "!release/*",
+      "!engine/*",
+      "!venv/*",
+      "!src/*",
+      "!.git/*",
+      "!.vscode/*"
+    ],
+    "extraResources": [
+      {
+        "from": "engine",
+        "to": "engine",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "lucide": "^0.563.0",
+    "systeminformation": "^5.23.4"
+  }
+}
