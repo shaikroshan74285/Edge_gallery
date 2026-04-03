@@ -1,0 +1,25 @@
+# === Targeted Binary Files ===
+*.exe
+*.dll
+*.bin
+
+# === Specific Folders ===
+engine/
+cpu_avx/
+cpu_av2/
+bin/
+
+# === Common Build & Installer Outputs ===
+*.zip
+*.msi
+dist/
+build/
+
+# === Python/Environment (If applicable) ===
+__pycache__/
+venv/
+.env
+
+# === System Files ===
+[Dd]esktop.ini
+Thumbs.db
