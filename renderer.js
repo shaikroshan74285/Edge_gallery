@@ -493,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Wire up Drag and drop
     setupDragAndDrop();
+<<<<<<< HEAD
 
     // Forward main process STT logs to DevTools console (critical for production debugging)
     if (window.electronAPI?.onSTTLog) {
@@ -500,6 +501,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('%c[MAIN]', 'color: #f59e0b; font-weight: bold', msg);
         });
     }
+=======
+>>>>>>> ac08b0cfb631129ffba9dade3df13e1a737a33f6
 });
 
 // Drag and Drop Logic
